@@ -1,5 +1,5 @@
 const express = require("express");
-const morgan = require("morgan");
+const logger = require("morgan");
 const mongoose = require("mongoose");
 const compression = require("compression");
 
@@ -7,7 +7,7 @@ const PORT = 3000;
 
 const app = express();
 
-app.use(morgan("dev"));
+app.use(logger("dev"));
 
 app.use(compression());
 app.use(express.urlencoded({ extended: true }));
@@ -15,11 +15,8 @@ app.use(express.json());
 
 app.use(express.static("public"));
 
-var MONGODB_URI = process.env.MONGODB_URI || "mongodb://localhost/workout";
-mongoose.connect(MONGODB_URI, {
+mongoose.connect("mongodb://localhost/budget", {
   useNewUrlParser: true,
-  useUnifiedTopology: true,
-  useCreateIndex: true,
   useFindAndModify: false,
 });
 
