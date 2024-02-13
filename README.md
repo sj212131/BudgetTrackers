@@ -1,14 +1,8 @@
 # BudgetTrackers
 
-# Homework-June-8
-
-==================================================================================================
-
-## Home assignment
-
 Background:
 
-This is Homework due on May 8. Practice of mongo DataBase set up, and connection with deployed app. User able to view create and track daily workouts
+This is a Budget tracker app. Practice of mongo DataBase set up, and connection with deployed app. User able to view create and track daily workouts
 
 ---
 
